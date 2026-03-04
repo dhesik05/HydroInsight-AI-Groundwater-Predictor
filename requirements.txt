@@ -1,0 +1,24 @@
+# HydroInsight – AI Groundwater Predictor
+
+HydroInsight is an AI-based groundwater prediction system that analyzes environmental parameters such as rainfall, temperature, soil moisture, and humidity to estimate groundwater levels.
+
+## Features
+- Machine Learning groundwater prediction
+- Environmental data analysis
+- Simple web interface for prediction
+
+## Technologies
+Python  
+Machine Learning  
+Scikit-Learn  
+Flask  
+
+## Usage
+
+Train the model:
+
+python model/train_model.py
+
+Run the application:
+
+python app.py
