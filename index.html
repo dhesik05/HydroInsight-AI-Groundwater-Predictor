@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroInsight Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💧 HydroInsight – AI-Driven Groundwater Prediction</h1>
+
+    <!-- Controls -->
+    <div class="controls">
+      <label>Future Rainfall (mm):</label>
+      <input type="range" id="rainfall" min="50" max="400" value="200" oninput="updatePrediction()">
+      <span id="rainfallValue">200</span> mm
+
+      <br><br>
+
+      <label>Future Temperature (°C):</label>
+      <input type="range" id="temperature" min="20" max="40" value="30" oninput="updatePrediction()">
+      <span id="tempValue">30</span> °C
+    </div>
+
+    <!-- Prediction Output -->
+    <div id="result" class="result-box">
+      Predicted Groundwater Level: <b>-- m</b><br>
+      Risk Level: <span id="risk" class="low">--</span>
+    </div>
+
+    <!-- Chart -->
+    <h2>📊 Historical vs Predicted Levels</h2>
+    <canvas id="groundwaterChart" width="800" height="400"></canvas>
+
+    <!-- Map -->
+    <h2>🗺️ District Risk Map</h2>
+    <div id="map"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
